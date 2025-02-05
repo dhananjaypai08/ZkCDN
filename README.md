@@ -3,8 +3,7 @@
 
 ### Deployments
 - zkcdnGraph Subgraph : [https://thegraph.com/studio/subgraph/zkcdngraph/](https://thegraph.com/studio/subgraph/zkcdngraph/)
-- Demo Video : [https://www.loom.com/share/1ac71e714d2043b8b07a31f37745fa95?sid=429779b4-aaca-4524-82c1-76b6d8daf91f](https://www.loom.com/share/1ac71e714d2043b8b07a31f37745fa95?sid=429779b4-aaca-4524-82c1-76b6d8daf91f)
-- Deployed on the scroll sepolia testnetwork - [https://sepolia.scrollscan.com/address/0xE5220548856b1872c3207baaeE317de4714D2EfF](https://sepolia.scrollscan.com/address/0xE5220548856b1872c3207baaeE317de4714D2EfF)
+
 
 ### Setting up the project locally
 
