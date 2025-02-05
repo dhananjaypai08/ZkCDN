@@ -1,0 +1,47 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: ZkCDN
+    network: scroll-sepolia
+    source:
+      address: "0xE5220548856b1872c3207baaeE317de4714D2EfF"
+      abi: ZkCDN
+      startBlock: 6853948
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - ApprovalForAll
+        - ConvertedString
+        - Encrypted_CID
+        - Mapping
+        - Mint
+        - OwnershipTransferred
+        - Transfer
+      abis:
+        - name: ZkCDN
+          file: ./abis/ZkCDN.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApproval
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: ConvertedString(uint256)
+          handler: handleConvertedString
+        - event: Encrypted_CID(uint256)
+          handler: handleEncrypted_CID
+        - event: Mapping(uint256)
+          handler: handleMapping
+        - event: Mint(address,uint256)
+          handler: handleMint
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/zk-cdn.ts
