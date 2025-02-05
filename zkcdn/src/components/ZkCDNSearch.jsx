@@ -85,8 +85,7 @@ const ZkCDNSearch = () => {
 
       if (verifyResponse.data.message === "Proof is verified") {
         // Call smart contract method
-        const contractwithsigner = await contract.connect(signer);
-        let ipfsHash = await contractwithsigner.getStringFromInt(searchInput);
+        let ipfsHash = await contract.getStringFromInt(searchInput);
         console.log(ipfsHash);
         ipfsHash = ipfsHash.toString();
         console.log(ipfsHash);
