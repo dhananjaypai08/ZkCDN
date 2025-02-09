@@ -45,6 +45,23 @@ Users upload content hashed using the DJB2 algorithm along with a zkProof, ensur
    - User is unaware of the exact content source.
    - zkProof ensures privacy and integrity throughout.
 
+## Local Setup
+- Frontend
+    ```sh
+    cd zkcdn
+    npm i
+    npm run dev
+    ```
+
+- Backend for zkproofs
+    ```sh
+    cd off-chainPy
+    python3 -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
+    python3 proofs/main.py
+    ```
+
 
 ## 💡 Innovations & Features
 - **Privacy-Preserving Access:** No metadata leaks during content retrieval.
