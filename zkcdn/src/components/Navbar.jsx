@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="bg-gray-900 shadow-lg">
+    <nav className="bg-gray-950 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -22,7 +22,7 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {['Home', 'ContentProvider', 'Search', 'Dashboard', 'GraphChatBot'].map((item) => (
+              {['Home', 'ContentProvider', 'Search', 'Dashboard'].map((item) => (
                 <motion.div key={item} whileHover={{ y: -2 }}>
                   <Link
                     to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
